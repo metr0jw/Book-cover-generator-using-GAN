@@ -12,7 +12,7 @@ class Loss:
         return
 
 
-class Generator:
+class Discriminator:
     def __init__(self):
         self.initVariable = 1
 
@@ -24,4 +24,3 @@ class Generator:
 
     def trainModel(self, inputX, inputY):
         return
-

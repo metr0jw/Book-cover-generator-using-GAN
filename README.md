@@ -6,5 +6,5 @@ GAN based Korean book cover generator
 * Requirements
 >requirements.txt
 
-###Installation(Not available currently)
+* Installation(Not available currently)
 >git clone https://github.com/metr0jw/Book-cover-generator-using-GAN

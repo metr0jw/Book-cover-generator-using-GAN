@@ -1,3 +1,9 @@
+import tensorflow as tf
+import keras as k
+import numpy as np
+import matplotlib.pyplot as plt
+from tensorflow.examples.tutorials.mnist import input_data
+
 class Loss:
     def __init__(self):
         self.initVariable = 1

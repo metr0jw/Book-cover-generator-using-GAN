@@ -2,10 +2,9 @@ import tensorflow as tf
 import keras as k
 import numpy as np
 import matplotlib.pyplot as plt
-from tensorflow.examples.tutorials.mnist import input_data
 
 
-mnist = input_data.read_data_sets("MNIST_DATA/", one_hot=False)
+mnist = tf.keras.datasets.mnist
 print("Shape of the training image dataset is " + str(mnist.train.images.shape))
 print("Shape of the training image label is " + str(mnist.train.images.shape))
 

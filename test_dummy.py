@@ -1,18 +1,21 @@
-import tensorflow as tf
-import keras as k
 import numpy as np
+import pandas as pd
 import matplotlib.pyplot as plt
 
+df0 = pd.read_csv('/data/adult.data')
+df1 = pd.read_csv('/data/adult.data', header=None)
+df2 = pd.read_csv('/data/adult.data',
+                  names=['age', 'workclass', 'fnlwgt', 'education', 'education-num', 'marital-status', 'occupation',
+                         'relationship', 'race', 'sex', 'capital-gain', 'capital-loss', 'hours-per-week',
+                         'native-country', 'Label'])
+mappings = {}
 
-mnist = tf.keras.datasets.mnist
-print("Shape of the training image dataset is " + str(mnist.train.images.shape))
-print("Shape of the training image label is " + str(mnist.train.images.shape))
-
-index = np.random.choice(mnist.train.images.shape[0], 1)
-random_image = mnist.train.images[index]
-random_label = mnist.train.labels[index]
-random_image = random_image.reshape([28, 28])
-
-plt.gray()
-plt.imshow(random_image)
-plt.show()
+for col_name in df2.columns:
+    if df2[col_name].dtype == 'object':
+        df2[col_name] = df2[col_name].astype('category')
+        df2[col_name], mapping_index = pd.Series(df2[col_name]).factorize()
+        mappings[col_name] = {}
+        for i in range(len(mapping_index.categories)):
+            mappings[col_name][i] = mapping_index.categories[i]
+    else:
+        mappings[col_name] = 'continuous'

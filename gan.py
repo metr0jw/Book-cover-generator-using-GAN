@@ -29,4 +29,4 @@ class GAN(object):
         return self.gan_model.summary()
 
     def save_model(self):
-        plot_model(self.gan_model.model, to_file='/data/GAN_Model.png')
+        plot_model(self.gan_model.model, to_file='./data/GAN_Model.png')

@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 import numpy as np
 from keras.layers import Dense, Reshape
@@ -47,5 +46,5 @@ class Generator(object):
         return self.Generator.summary()
 
     def save_model(self):
-        plot_model(self.Generator.model, to_file='/data/Generator_Model.png')
+        plot_model(self.Generator.model, to_file='./data/Generator_Model.png')
 

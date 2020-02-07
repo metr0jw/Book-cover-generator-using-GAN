@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 import numpy as np
 from keras.layers import Input, Dense, Reshape, Flatten, Dropout
@@ -34,5 +33,5 @@ class Discriminator(object):
         return self.Discriminator.summary()
 
     def save_model(self):
-        plot_model(self.Discriminator.model, to_file='/data/Discriminator_Model.png')
+        plot_model(self.Discriminator.model, to_file='./data/Discriminator_Model.png')
 

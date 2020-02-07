@@ -80,7 +80,7 @@ class Trainer:
         return np.random.normal(0, 1, (instances, self.LATENT_SPACE_SIZE))
 
     def plot_checkpoint(self, e):
-        filename = "/data/sample_" + str(e) + ".png"
+        filename = "./data/sample_" + str(e) + ".png"
 
         noise = self.sample_latent_space(16)
         images = self.generator.Generator.predict(noise)

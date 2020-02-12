@@ -2,9 +2,9 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df0 = pd.read_csv('/data/adult.data')
-df1 = pd.read_csv('/data/adult.data', header=None)
-df2 = pd.read_csv('/data/adult.data',
+df0 = pd.read_csv('./adult.data')
+df1 = pd.read_csv('./adult.data', header=None)
+df2 = pd.read_csv('./adult.data',
                   names=['age', 'workclass', 'fnlwgt', 'education', 'education-num', 'marital-status', 'occupation',
                          'relationship', 'race', 'sex', 'capital-gain', 'capital-loss', 'hours-per-week',
                          'native-country', 'Label'])

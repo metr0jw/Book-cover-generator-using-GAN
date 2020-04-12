@@ -9,7 +9,7 @@ from keras.utils import plot_model
 
 
 class Generator(object):
-    def __init__(self, width=28, height=28, channels=1, latent_size=100):
+    def __init__(self, width=90, height=120, channels=3, latent_size=100):
         self.W = width
         self.H = height
         self.C = channels

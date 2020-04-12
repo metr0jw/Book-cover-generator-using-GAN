@@ -8,7 +8,7 @@ from keras.utils import plot_model
 
 
 class Discriminator(object):
-    def __init__(self, width = 28, height= 28, channels = 1, latent_size=100):
+    def __init__(self, width = 90, height= 120, channels = 3, latent_size=100):
         self.CAPACITY = width*height*channels
         self.SHAPE = (width,height,channels)
         self.OPTIMIZER = Adam(lr=0.0002, decay=8e-9)

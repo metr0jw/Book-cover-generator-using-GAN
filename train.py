@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 
 
 class Trainer:
-    def __init__(self, width=28, height=28, channels=1, latent_size=100, epochs=50000, batch=32, checkpoint=50,
+    def __init__(self, width=90, height=120, channels=1, latent_size=100, epochs=50000, batch=32, checkpoint=50,
                  model_type=-1):
         self.W = width
         self.H = height
